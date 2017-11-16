@@ -169,3 +169,10 @@ and factureProf.idCom = ligneCom.idCom
 and commande.idFacture = factureProf.idFacture
 and categProf.idCategProf= professionnel.idCategProf
 group by ligneCom.idCom;
+
+create view StatsMoisVendeur ( nomVendeur, prenomVendeur, nomSociete, mois, nbVenteAuMoi)
+as select nomDirigeant, prenomDirigeant, raisonSocial, MONTH(dateReg), count(factureProf.idFacture)
+from professionnel, ligneCom, commande, factureProf
+where professionnel.idProf = ligneCom.idProf and commande.idCom = ligneCom.idCom
+and commande.idFacture = factureProf.idFacture
+group by MONTH(factureProf.dateReg);
