@@ -129,6 +129,7 @@ create table ligneCom(
   idProduit varchar(32),
   idClient int(11) not null,
   idCom int(11) not null,
+  qte int (5) not null,
   primary key (idProf, idProduit, idClient, idCom),
   foreign key (idProf, idProduit) references produit(idProf, idProduit),
   foreign key (idClient) references client(idClient),
