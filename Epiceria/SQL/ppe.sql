@@ -158,3 +158,8 @@ insert into zoneG values
 (null, 'Île-de-France', '18ème arr.'),
 (null, 'Île-de-France', '19ème arr.'),
 (null, 'Île-de-France', '20ème arr.');
+
+
+create view (viewStatVendeur) as select nomDirigeant, prenomDirigeant, raisonSocial, categProf.libelle, count(ligneCom.idCom),
+factureProf.idFacture where professionnel.idProf = ligneCom.idProf and factureProf.idCom = ligneCom.idCom
+group by ligneCom.idCom;
