@@ -160,6 +160,12 @@ insert into zoneG values
 (null, 'Île-de-France', '20ème arr.');
 
 
-create view (viewStatVendeur) as select nomDirigeant, prenomDirigeant, raisonSocial, categProf.libelle, count(ligneCom.idCom),
-factureProf.idFacture where professionnel.idProf = ligneCom.idProf and factureProf.idCom = ligneCom.idCom
+create view StatsVendeur (nomVendeur, prenomVendeur, nomSociete, nomSociete CategorieCommerce, QteCommandee, QteFacturee) 
+as select nomDirigeant, prenomDirigeant, raisonSocial, categProf.libelle, count(ligneCom.idCom),
+factureProf.idFacture 
+from professionnel, categProf, commande, ligneCom, 
+where professionnel.idProf = ligneCom.idProf 
+and factureProf.idCom = ligneCom.idCom
+and commande.idFacture = factureProf.idFacture
+and categProf.idCategProf= professionnel.idCategProf
 group by ligneCom.idCom;
