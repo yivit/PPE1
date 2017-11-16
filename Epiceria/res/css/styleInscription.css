@@ -1,0 +1,89 @@
+body, html{
+  margin: 0;
+  padding:0;
+}
+
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+body{
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+  border:none;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+input[type=submit]{
+  margin-top:30px;
+}
+
+.selected {
+  padding: 10px 30px;
+  background-color: rgb(86, 90, 181);
+  border:1px solid rgb(86, 90, 181);
+  color: white;
+  cursor: pointer;
+  width:200px;
+}
+
+.not-selected {
+  padding: 10px 30px;
+  background-color: transparent;
+  border:1px solid rgb(86, 90, 181);
+  color: rgb(86, 90, 181);
+  cursor: pointer;
+  width:200px;
+}
+
+.not-selected:hover {
+  background-color: rgb(86, 90, 181);
+  color: white;
+}
+
+.combo select {
+  padding: 10px 15px;
+  height: 22px;
+  outline:none;
+  width:120px;
+  border-radius:50px;
+  text-indent: 5px;
+  border: none;
+  background-color: white;
+}
+
+#validationInscription{
+  margin-top:10px;
+  margin-bottom: 20px;
+  padding: 8px 25px;
+  background-color: transparent;
+  border:1px solid rgb(97, 216, 97);
+  color: rgb(97, 216, 97);
+  cursor: pointer;
+  width:150px;
+}
+
+#validationInscription:hover {
+  background-color: rgb(97, 216, 97);
+  color: white;
+}
+
+#prenium[type=submit]{
+  margin-top:-10px;
+  padding: 8px 25px;
+  background-color: rgb(255, 214, 94);
+  border:1px solid rgb(255, 214, 94);
+  color: white;
+  cursor: pointer;
+  width:200px;
+}

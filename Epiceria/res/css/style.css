@@ -1,0 +1,75 @@
+
+body, html{
+  margin: 0;
+  padding:0;
+}
+
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+#container {
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+
+#form_identification{
+  background-color: rgba(255,255,255,0.7);
+  padding: 30px 0px;
+  box-shadow: 3px 3px 20px black;
+}
+
+#form_identification > input{
+  margin: 5px;
+  border-radius: 50px;
+  border: none;
+  text-indent: 7px;
+  padding: 5px;
+}
+
+#form_identification > input[type=submit]{
+  margin-top: 30px;
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  border:1px solid rgb(97, 216, 97);
+  color: rgb(97, 216, 97);
+  text-indent: 0px;
+  cursor: pointer;
+}
+
+#form_identification > input[type=submit]:hover{
+  background-color: rgb(97, 216, 97);
+  color: white;
+}
+
+#inscription{
+  margin-top: 30px;
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  border:1px solid rgb(86, 90, 181);
+  color: rgb(86, 90, 181);
+  text-indent: 0px;
+  cursor: pointer;
+}
+
+#inscription:hover{
+  background-color: rgb(86, 90, 181);
+  color: white;
+}
