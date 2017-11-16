@@ -1,1 +1,4 @@
 -- TODO --
+
+- Contrôle des saisies utilisateurs dans les formulaires d'inscription
+  - Gerer les tentatives de bruteforce (ban après X essais)
