@@ -159,7 +159,7 @@ insert into zoneG values
 (null, 'Île-de-France', '19ème arr.'),
 (null, 'Île-de-France', '20ème arr.');
 
-
+-- View StatsVendeur -- 
 create view StatsVendeur (nomVendeur, prenomVendeur, nomSociete, nomSociete CategorieCommerce, QteCommandee, QteFacturee) 
 as select nomDirigeant, prenomDirigeant, raisonSocial, categProf.libelle, count(ligneCom.idCom),
 factureProf.idFacture 
@@ -170,9 +170,25 @@ and commande.idFacture = factureProf.idFacture
 and categProf.idCategProf= professionnel.idCategProf
 group by ligneCom.idCom;
 
+
+-- View StatsMoisVendeur --
 create view StatsMoisVendeur ( nomVendeur, prenomVendeur, nomSociete, mois, nbVenteAuMoi)
 as select nomDirigeant, prenomDirigeant, raisonSocial, MONTH(dateReg), count(factureProf.idFacture)
 from professionnel, ligneCom, commande, factureProf
 where professionnel.idProf = ligneCom.idProf and commande.idCom = ligneCom.idCom
 and commande.idFacture = factureProf.idFacture
 group by MONTH(factureProf.dateReg);
+
+
+-- Trigger pour check des essais --
+
+CREATE TRIGGER check_essais AFTER UPDATE
+ON professionnel FOR EACH ROW
+BEGIN
+    IF new.nb_essais > 2  -- le nombre d'éssais est supérieur à 2
+      THEN
+        UPDATE professionnel set new.temps_ban = current_timestamp + 180 where idProf = old.idProf; -- 180 = temps de ban --
+        UPDATE professionnel set nb_essais = 0 where idProf = old.idProf;
+    END IF;
+END;
+
