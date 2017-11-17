@@ -1,4 +1,9 @@
 -- TODO --
 
 - Contrôle des saisies utilisateurs dans les formulaires d'inscription
-  - Gerer les tentatives de bruteforce (ban après X essais)
+
+
+
+- Gerer les tentatives de bruteforce (ban après X essais) 
+  * Créer les champs nb_essais (int) & temps_ban (timestamp)
+  * Utiliser le trigger (cf SQL/ppe.sql)
