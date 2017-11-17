@@ -1,0 +1,33 @@
+Pour le côté gestion (commerçant)
+
+- Page de gestion produits
+- Page de mise à disposition de produits pré-enregistrés
+- Page de gestion profil (lien facebook / adresse / nom de boutique etc..)
+- Bouton "aperçu en tant que client"
+- Page de statistiques
+- Liste des commandes en cours (à préparer)
+
+Pour l'accueil côté client:
+
+- Aperçu des boutiques en TOP
+- Aperçu des boutiques les plus proches avec petite description et bouton "Acceder à la boutique"
+- Champs de recherche mot clé (secteur, produit, nom de boutique)
+-
+
+Pour l'aperçu de toutes les boutiques :
+
+- Mise en avant des boutiques proche de nous avec les meilleurs notes
+
+
+
+Pour la page d'une boutique :
+
+- Système de commentaire / notes
+- Proposer le partage de lien facebook/twitter etc..
+
+
+
+Autre :
+
+- Système d'alerte par sms en cas de commande
+- Système de rappel d'une commande pour le client
