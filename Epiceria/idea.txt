@@ -9,10 +9,16 @@ Pour le côté gestion (commerçant)
 
 Pour l'accueil côté client:
 
+- Thème Bootstrap prévisionnel (Heroic Features)
 - Aperçu des boutiques en TOP
 - Aperçu des boutiques les plus proches avec petite description et bouton "Acceder à la boutique"
 - Champs de recherche mot clé (secteur, produit, nom de boutique)
 -
+
+Page de gestion profil client :
+
+- Mise en ligne d'une photo / Nom-Prenom-Adresse ...
+
 
 Pour l'aperçu de toutes les boutiques :
 
@@ -22,8 +28,13 @@ Pour l'aperçu de toutes les boutiques :
 
 Pour la page d'une boutique :
 
-- Système de commentaire / notes
+- Thème Bootstrap (Blog Post ou Blog Home)
+- Système de commentaire 
+- Système de NOTES (a voir pour ne pas "enfoncer" les commerçants
 - Proposer le partage de lien facebook/twitter etc..
+- Description détaillée de la boutique / photo de la boutique / adresse / photos du staff etc..
+- Position de la boutique sur une MAP
+- Liste des produits
 
 
 
